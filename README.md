@@ -1,2 +1,3 @@
 # tksovtov
 tietokantasovellusten toteuttaminen
+TestataaN versiohallinnan toimintaa
