@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="northwindModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="northwindModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -446,7 +446,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="northwindModel1StoreContainer">
+        <EntityContainer Name="northwindModelStoreContainer">
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CustomerCustomerDemo" EntityType="Self.CustomerCustomerDemo" Schema="dbo" store:Type="Tables" />
@@ -466,56 +466,56 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
           <EntitySet Name="Territories" EntityType="Self.Territories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="cust_apu" EntityType="Self.cust_apu" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [cust_apu].[CustomerID] AS [CustomerID], 
-    [cust_apu].[CompanyName] AS [CompanyName], 
-    [cust_apu].[ContactName] AS [ContactName], 
-    [cust_apu].[ContactTitle] AS [ContactTitle], 
-    [cust_apu].[Address] AS [Address], 
-    [cust_apu].[City] AS [City], 
-    [cust_apu].[Region] AS [Region], 
-    [cust_apu].[PostalCode] AS [PostalCode], 
-    [cust_apu].[Country] AS [Country], 
-    [cust_apu].[Phone] AS [Phone], 
-    [cust_apu].[Fax] AS [Fax]
-    FROM [dbo].[cust_apu] AS [cust_apu]</DefiningQuery>
+[cust_apu].[CustomerID] AS [CustomerID], 
+[cust_apu].[CompanyName] AS [CompanyName], 
+[cust_apu].[ContactName] AS [ContactName], 
+[cust_apu].[ContactTitle] AS [ContactTitle], 
+[cust_apu].[Address] AS [Address], 
+[cust_apu].[City] AS [City], 
+[cust_apu].[Region] AS [Region], 
+[cust_apu].[PostalCode] AS [PostalCode], 
+[cust_apu].[Country] AS [Country], 
+[cust_apu].[Phone] AS [Phone], 
+[cust_apu].[Fax] AS [Fax]
+FROM [dbo].[cust_apu] AS [cust_apu]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="emp_apu" EntityType="Self.emp_apu" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [emp_apu].[EmployeeID] AS [EmployeeID], 
-    [emp_apu].[LastName] AS [LastName], 
-    [emp_apu].[FirstName] AS [FirstName], 
-    [emp_apu].[Title] AS [Title], 
-    [emp_apu].[TitleOfCourtesy] AS [TitleOfCourtesy], 
-    [emp_apu].[BirthDate] AS [BirthDate], 
-    [emp_apu].[HireDate] AS [HireDate], 
-    [emp_apu].[Address] AS [Address], 
-    [emp_apu].[City] AS [City], 
-    [emp_apu].[Region] AS [Region], 
-    [emp_apu].[PostalCode] AS [PostalCode], 
-    [emp_apu].[Country] AS [Country], 
-    [emp_apu].[HomePhone] AS [HomePhone], 
-    [emp_apu].[Extension] AS [Extension], 
-    [emp_apu].[Photo] AS [Photo], 
-    [emp_apu].[Notes] AS [Notes], 
-    [emp_apu].[ReportsTo] AS [ReportsTo], 
-    [emp_apu].[PhotoPath] AS [PhotoPath]
-    FROM [dbo].[emp_apu] AS [emp_apu]</DefiningQuery>
+[emp_apu].[EmployeeID] AS [EmployeeID], 
+[emp_apu].[LastName] AS [LastName], 
+[emp_apu].[FirstName] AS [FirstName], 
+[emp_apu].[Title] AS [Title], 
+[emp_apu].[TitleOfCourtesy] AS [TitleOfCourtesy], 
+[emp_apu].[BirthDate] AS [BirthDate], 
+[emp_apu].[HireDate] AS [HireDate], 
+[emp_apu].[Address] AS [Address], 
+[emp_apu].[City] AS [City], 
+[emp_apu].[Region] AS [Region], 
+[emp_apu].[PostalCode] AS [PostalCode], 
+[emp_apu].[Country] AS [Country], 
+[emp_apu].[HomePhone] AS [HomePhone], 
+[emp_apu].[Extension] AS [Extension], 
+[emp_apu].[Photo] AS [Photo], 
+[emp_apu].[Notes] AS [Notes], 
+[emp_apu].[ReportsTo] AS [ReportsTo], 
+[emp_apu].[PhotoPath] AS [PhotoPath]
+FROM [dbo].[emp_apu] AS [emp_apu]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="supp_apu" EntityType="Self.supp_apu" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [supp_apu].[SupplierID] AS [SupplierID], 
-    [supp_apu].[CompanyName] AS [CompanyName], 
-    [supp_apu].[ContactName] AS [ContactName], 
-    [supp_apu].[ContactTitle] AS [ContactTitle], 
-    [supp_apu].[Address] AS [Address], 
-    [supp_apu].[City] AS [City], 
-    [supp_apu].[Region] AS [Region], 
-    [supp_apu].[PostalCode] AS [PostalCode], 
-    [supp_apu].[Country] AS [Country], 
-    [supp_apu].[Phone] AS [Phone], 
-    [supp_apu].[Fax] AS [Fax], 
-    [supp_apu].[HomePage] AS [HomePage]
-    FROM [dbo].[supp_apu] AS [supp_apu]</DefiningQuery>
+[supp_apu].[SupplierID] AS [SupplierID], 
+[supp_apu].[CompanyName] AS [CompanyName], 
+[supp_apu].[ContactName] AS [ContactName], 
+[supp_apu].[ContactTitle] AS [ContactTitle], 
+[supp_apu].[Address] AS [Address], 
+[supp_apu].[City] AS [City], 
+[supp_apu].[Region] AS [Region], 
+[supp_apu].[PostalCode] AS [PostalCode], 
+[supp_apu].[Country] AS [Country], 
+[supp_apu].[Phone] AS [Phone], 
+[supp_apu].[Fax] AS [Fax], 
+[supp_apu].[HomePage] AS [HomePage]
+FROM [dbo].[supp_apu] AS [supp_apu]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_CustomerCustomerDemo" Association="Self.FK_CustomerCustomerDemo">
             <End Role="CustomerDemographics" EntitySet="CustomerDemographics" />
@@ -578,7 +578,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="northwindModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="northwindModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -982,7 +982,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
           <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
           <End Role="Territories" Type="Self.Territories" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="northwindEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="northwindEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Categories" />
           <EntitySet Name="Contacts" EntityType="Self.Contacts" />
           <EntitySet Name="CustomerDemographics" EntityType="Self.CustomerDemographics" />
@@ -1055,9 +1055,9 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="northwindModel1StoreContainer" CdmEntityContainer="northwindEntities1">
+        <EntityContainerMapping StorageEntityContainer="northwindModelStoreContainer" CdmEntityContainer="northwindEntities2">
           <EntitySetMapping Name="Categories">
-            <EntityTypeMapping TypeName="northwindModel1.Categories">
+            <EntityTypeMapping TypeName="northwindModel.Categories">
               <MappingFragment StoreEntitySet="Categories">
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
@@ -1067,7 +1067,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Contacts">
-            <EntityTypeMapping TypeName="northwindModel1.Contacts">
+            <EntityTypeMapping TypeName="northwindModel.Contacts">
               <MappingFragment StoreEntitySet="Contacts">
                 <ScalarProperty Name="ContactID" ColumnName="ContactID" />
                 <ScalarProperty Name="ContactType" ColumnName="ContactType" />
@@ -1089,7 +1089,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CustomerDemographics">
-            <EntityTypeMapping TypeName="northwindModel1.CustomerDemographics">
+            <EntityTypeMapping TypeName="northwindModel.CustomerDemographics">
               <MappingFragment StoreEntitySet="CustomerDemographics">
                 <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
                 <ScalarProperty Name="CustomerDesc" ColumnName="CustomerDesc" />
@@ -1097,7 +1097,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Customers">
-            <EntityTypeMapping TypeName="northwindModel1.Customers">
+            <EntityTypeMapping TypeName="northwindModel.Customers">
               <MappingFragment StoreEntitySet="Customers">
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -1114,7 +1114,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Documentation">
-            <EntityTypeMapping TypeName="northwindModel1.Documentation">
+            <EntityTypeMapping TypeName="northwindModel.Documentation">
               <MappingFragment StoreEntitySet="Documentation">
                 <ScalarProperty Name="DocumentationID" ColumnName="DocumentationID" />
                 <ScalarProperty Name="AvailableRoute" ColumnName="AvailableRoute" />
@@ -1125,7 +1125,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Employees">
-            <EntityTypeMapping TypeName="northwindModel1.Employees">
+            <EntityTypeMapping TypeName="northwindModel.Employees">
               <MappingFragment StoreEntitySet="Employees">
                 <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -1149,7 +1149,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Logins">
-            <EntityTypeMapping TypeName="northwindModel1.Logins">
+            <EntityTypeMapping TypeName="northwindModel.Logins">
               <MappingFragment StoreEntitySet="Logins">
                 <ScalarProperty Name="LoginId" ColumnName="LoginId" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -1158,7 +1158,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Order_Details">
-            <EntityTypeMapping TypeName="northwindModel1.Order_Details">
+            <EntityTypeMapping TypeName="northwindModel.Order_Details">
               <MappingFragment StoreEntitySet="Order Details">
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -1169,7 +1169,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="northwindModel1.Orders">
+            <EntityTypeMapping TypeName="northwindModel.Orders">
               <MappingFragment StoreEntitySet="Orders">
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
@@ -1189,7 +1189,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="northwindModel1.Products">
+            <EntityTypeMapping TypeName="northwindModel.Products">
               <MappingFragment StoreEntitySet="Products">
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
@@ -1206,7 +1206,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Region">
-            <EntityTypeMapping TypeName="northwindModel1.Region">
+            <EntityTypeMapping TypeName="northwindModel.Region">
               <MappingFragment StoreEntitySet="Region">
                 <ScalarProperty Name="RegionID" ColumnName="RegionID" />
                 <ScalarProperty Name="RegionDescription" ColumnName="RegionDescription" />
@@ -1214,7 +1214,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shippers">
-            <EntityTypeMapping TypeName="northwindModel1.Shippers">
+            <EntityTypeMapping TypeName="northwindModel.Shippers">
               <MappingFragment StoreEntitySet="Shippers">
                 <ScalarProperty Name="ShipperID" ColumnName="ShipperID" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -1224,7 +1224,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Suppliers">
-            <EntityTypeMapping TypeName="northwindModel1.Suppliers">
+            <EntityTypeMapping TypeName="northwindModel.Suppliers">
               <MappingFragment StoreEntitySet="Suppliers">
                 <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -1242,7 +1242,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="northwindModel1.sysdiagrams">
+            <EntityTypeMapping TypeName="northwindModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -1253,7 +1253,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Territories">
-            <EntityTypeMapping TypeName="northwindModel1.Territories">
+            <EntityTypeMapping TypeName="northwindModel.Territories">
               <MappingFragment StoreEntitySet="Territories">
                 <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
                 <ScalarProperty Name="TerritoryDescription" ColumnName="TerritoryDescription" />
@@ -1262,7 +1262,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="cust_apu">
-            <EntityTypeMapping TypeName="northwindModel1.cust_apu">
+            <EntityTypeMapping TypeName="northwindModel.cust_apu">
               <MappingFragment StoreEntitySet="cust_apu">
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -1279,7 +1279,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="emp_apu">
-            <EntityTypeMapping TypeName="northwindModel1.emp_apu">
+            <EntityTypeMapping TypeName="northwindModel.emp_apu">
               <MappingFragment StoreEntitySet="emp_apu">
                 <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -1303,7 +1303,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="supp_apu">
-            <EntityTypeMapping TypeName="northwindModel1.supp_apu">
+            <EntityTypeMapping TypeName="northwindModel.supp_apu">
               <MappingFragment StoreEntitySet="supp_apu">
                 <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -1320,7 +1320,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="CustomerCustomerDemo" TypeName="northwindModel1.CustomerCustomerDemo" StoreEntitySet="CustomerCustomerDemo">
+          <AssociationSetMapping Name="CustomerCustomerDemo" TypeName="northwindModel.CustomerCustomerDemo" StoreEntitySet="CustomerCustomerDemo">
             <EndProperty Name="CustomerDemographics">
               <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
             </EndProperty>
@@ -1328,7 +1328,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
               <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="EmployeeTerritories" TypeName="northwindModel1.EmployeeTerritories" StoreEntitySet="EmployeeTerritories">
+          <AssociationSetMapping Name="EmployeeTerritories" TypeName="northwindModel.EmployeeTerritories" StoreEntitySet="EmployeeTerritories">
             <EndProperty Name="Employees">
               <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
             </EndProperty>
@@ -1352,7 +1352,7 @@ warning 6002: The table/view 'northwind.dbo.supp_apu' does not have a primary ke
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
