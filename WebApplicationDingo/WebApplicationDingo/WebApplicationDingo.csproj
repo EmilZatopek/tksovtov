@@ -49,6 +49,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -124,6 +126,80 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Categories.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contacts.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerDemographics.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customers.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cust_apu.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Documentation.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employees.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\emp_apu.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Logins.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelNothwind.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelNothwind.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelNothwind.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelNothwind.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelNothwind.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Orders.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order_Details.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Products.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Region.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Shippers.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Suppliers.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\supp_apu.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Territories.cs">
+      <DependentUpon>ModelNothwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TsingisKaan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TsingisKaan.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -146,12 +222,36 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\ModelNothwind.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelNothwind.edmx</DependentUpon>
+      <LastGenOutput>ModelNothwind.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelNothwind.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelNothwind.edmx</DependentUpon>
+      <LastGenOutput>ModelNothwind.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\TsingisKaan.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TsingisKaan.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\TsingisKaan.edmx.diagram">
+      <DependentUpon>TsingisKaan.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\ModelNothwind.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelNothwind.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelNothwind.edmx.diagram">
+      <DependentUpon>ModelNothwind.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -180,7 +280,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -208,6 +307,9 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
