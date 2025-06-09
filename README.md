@@ -7,3 +7,5 @@ chili co carne j‰ill‰ kiitos
 jaahastellaan taas lis‰‰
 toimiiks t‰‰
 eli pit‰‰ painaa kans push
+kirjoitetaan jotain uutta teksti‰
+
